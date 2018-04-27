@@ -1,5 +1,7 @@
 a = 1:50;
 the_answer = zeros(50,3);
+addpath('DB_Mango');
+
 for i = 1:50
     str1a = 'Mango_0';
     str1b = 'Mango_';
