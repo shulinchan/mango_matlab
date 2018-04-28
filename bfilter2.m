@@ -1,3 +1,4 @@
+
 % BFILTER2 Two dimensional bilateral filtering.
 %    This function implements 2-D bilateral filtering using
 %    the method outlined in:
@@ -66,8 +67,8 @@ function B = bfltGray(A,w,sigma_d,sigma_r)
 G = exp(-(X.^2+Y.^2)/(2*sigma_d^2));
 
 % Create waitbar.
-%h = waitbar(0,'Applying bilateral filter...');
-%set(h,'Name','Bilateral Filter Progress');
+h = waitbar(0,'Applying bilateral filter...');
+set(h,'Name','Bilateral Filter Progress');
 
 % Apply bilateral filter.
 dim = size(A);
@@ -90,11 +91,11 @@ for i = 1:dim(1)
          B(i,j) = sum(F(:).*I(:))/sum(F(:));
                
    end
-   %waitbar(i/dim(1));
+   waitbar(i/dim(1));
 end
 
 % Close waitbar.
-%close(h);
+close(h);
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,8 +117,8 @@ G = exp(-(X.^2+Y.^2)/(2*sigma_d^2));
 sigma_r = 100*sigma_r;
 
 % Create waitbar.
-%h = waitbar(0,'Applying bilateral filter...');
-%set(h,'Name','Bilateral Filter Progress');
+h = waitbar(0,'Applying bilateral filter...');
+set(h,'Name','Bilateral Filter Progress');
 
 % Apply bilateral filter.
 dim = size(A);
@@ -146,7 +147,7 @@ for i = 1:dim(1)
          B(i,j,3) = sum(sum(F.*I(:,:,3)))/norm_F;
                 
    end
-   %waitbar(i/dim(1));
+   waitbar(i/dim(1));
 end
 
 % Convert filtered image back to sRGB color space.
@@ -157,4 +158,4 @@ else
 end
 
 % Close waitbar.
-%close(h);
+close(h);

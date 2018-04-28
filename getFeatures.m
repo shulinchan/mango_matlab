@@ -1,13 +1,13 @@
 %returns a number of specified feature vectors('bins')
 %for a specific mango image ('mango')
-function features = getFeatures(bins,mango)
+%taking into account certain 'important' pixels
+function features = getFeatures(bins,mango,important)
     %convert mango to hsv
     hsvMango = rgb2hsv(mango);
     [r,c] = size(mango);
     c = c/3; %since c has 3 channels and we just want the column count
     
     %get relevant pixels using bilateral filtering
-    important = getRelevantPixels(mango);
     totalPixels = sum(sum(important));
 
     %separate values for h/s/v
