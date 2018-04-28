@@ -1,5 +1,6 @@
 %returns a number of specified feature vectors('bins')
 %for a specific mango image ('mango')
+%taking into account certain 'important' pixels
 function features = getFeatures(bins,mango,important)
     %convert mango to hsv
     hsvMango = rgb2hsv(mango);

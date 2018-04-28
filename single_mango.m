@@ -7,6 +7,8 @@ function result = single_mango(input1,input2)
     addpath('./unclassified_images');
     imgA = imread(input1);
     imgB = imread(input2);
+    
+    %run bilateral filter
     aBilat = getRelevantPixels(imgA);
     bBilat = getRelevantPixels(imgB);
     
