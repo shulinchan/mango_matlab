@@ -3,7 +3,7 @@ function count = runDemo(input)
     % Load test images.
     % Note: Must be double precision in the interval [0,1].
     % img1 = double(imread('Mango_42_B.JPG'))/255;
-    img1 = double(imread(input))/255;
+    img1 = double(input)/255;
     % % img3 = double(imread('Mango_13_B.JPG'))/255;
 
     % Set bilateral filter parameters.
