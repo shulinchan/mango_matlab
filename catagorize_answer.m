@@ -1,5 +1,6 @@
 a = load('answer.dat');
 the_answer = zeros(50,4);
+
 for i = 1:50 
     countA = a(i,2);
     countB = a(i,3);
