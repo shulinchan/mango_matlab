@@ -12,14 +12,14 @@ for i = 1:50
     str4 = '_B.JPG';
     if i < 10
         filename = strcat(strA, str3);
-        countA = runDemo(filename);
+        countA = runDemo(getRelevantPixels(imread(filename)));
         filename = strcat(strA, str4);
-        countB = runDemo(filename);
+        countB = runDemo(getRelevantPixels(imread(filename)));
     else 
         filename = strcat(strB, str3);
-        countA = runDemo(filename);
+        countA = runDemo(getRelevantPixels(imread(filename)));
         filename = strcat(strB, str4);
-        countB = runDemo(filename);
+        countB = runDemo(getRelevantPixels(imread(filename)));
     end
     the_answer(i,1) = i;
     the_answer(i,2) = countA;

@@ -1,4 +1,4 @@
-function mThenI = cbirMangoClassifier(file1,file2)
+function mThenI = cbirMangoClassifier(file1,file2,file1Bilat,file2Bilat)
     %load saved feature vector data
     data = load('mangoColorFV.mat');
     datasetFV = data.allData;
@@ -9,8 +9,8 @@ function mThenI = cbirMangoClassifier(file1,file2)
     mThenI = zeros(1,2);
     
     %Get features for corresponding A-side/B-side files
-    imgA = getFeatures(100,file1);
-    imgB = getFeatures(100,file2);
+    imgA = getFeatures(100,file1,file1Bilat);
+    imgB = getFeatures(100,file2,file2Bilat);
 
     %do comparison between the data and loaded images
     diffRank = cell(dLen,4);

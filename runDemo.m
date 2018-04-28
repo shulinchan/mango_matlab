@@ -1,39 +1,38 @@
-
 function count = runDemo(input)
     % Load test images.
     % Note: Must be double precision in the interval [0,1].
     % img1 = double(imread('Mango_42_B.JPG'))/255;
-    img1 = double(input)/255;
+    %img1 = double(input)/255;
     % % img3 = double(imread('Mango_13_B.JPG'))/255;
 
     % Set bilateral filter parameters.
-    w     = 5;       % bilateral filter half-width
-    sigma = [3 0.1]; % bilateral filter standard deviations
+    %w     = 5;       % bilateral filter half-width
+    %sigma = [3 0.1]; % bilateral filter standard deviations
 
     % Apply bilateral filter to each image.
-    bflt_img1 = bfilter2(img1,w,sigma);
+    %bflt_img1 = bfilter2(img1,w,sigma);
 
-    img = rgb2gray(bflt_img1);
-    imga = im2bw(img,0.1);
+%     img = rgb2gray(bflt_img1);
+%     imga = im2bw(img,0.1);
 %     figure(4); clf;
 %     set(gcf,'Name','Result of changing to bw');
 %     imshow(imga); axis image;
 %     title('blackwhite');
 
-    filled_img2=imfill(imga,'holes');
+%     filled_img2=imfill(imga,'holes');
 %     figure(5); clf;
 %     set(gcf,'Name','Result of GrayScale from Image Abstraction');
 %     imshow(filled_img2); axis image;
 %     title('filled_img');
 
-    rm_white_spots_img2=bwareafilt(filled_img2,[500 50000000000]);
+%     rm_white_spots_img2=bwareafilt(filled_img2,[500 50000000000]);
 %     figure(6); clf;
 %     set(gcf,'Name','Result of Removing White Spots');
 %     imshow(rm_white_spots_img2); axis image;
 %     title('removed_white_spots');
 
-    BW = edge(rm_white_spots_img2);
-%     figure(7); imshow(BW);
+    BW = edge(input);
+%   figure(7); imshow(BW);
     Orientations = skeletonOrientation(BW,5); %5x5 box
     Onormal = Orientations+90; %easier to view normals
     Onr = sind(Onormal); %vv

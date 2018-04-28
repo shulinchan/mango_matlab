@@ -7,13 +7,15 @@ function result = single_mango(input1,input2)
     addpath('./unclassified_images');
     imgA = imread(input1);
     imgB = imread(input2);
+    aBilat = getRelevantPixels(imgA);
+    bBilat = getRelevantPixels(imgB);
     
     %cbir to classify maturity
-    cbirClassification = cbirMangoClassifier(imgA,imgB);
+    cbirClassification = cbirMangoClassifier(imgA,imgB,aBilat,bBilat);
     
     %stem to classify maturity
-    countA = runDemo(imgA);
-    countB = runDemo(imgB);
+    countA = runDemo(aBilat);
+    countB = runDemo(bBilat);
     
     %ripe is represented by 1, unripe is represented by 0
     %if side-A has 0 then stem isn't visible so only check side-B, if side-B has 3-4 then it is ripe
