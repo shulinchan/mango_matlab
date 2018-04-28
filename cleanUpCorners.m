@@ -1,4 +1,4 @@
-%check rowsCorners 
+%check rowsCorners
 function count = cleanUpCorners(corners)
     count = 0;
     for i = 1:size(corners,1)-1
