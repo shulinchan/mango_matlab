@@ -22,7 +22,7 @@ function varargout = mangoGui(varargin)
 
 % Edit the above text to modify the response to help mangoGui
 
-% Last Modified by GUIDE v2.5 28-Apr-2018 11:55:49
+% Last Modified by GUIDE v2.5 28-Apr-2018 15:48:26
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -101,8 +101,19 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
-
+    input1 = get(handles.edit1,'String'); %edit1 being Tag of ur edit box
+    input2 = get(handles.edit2,'String');
+    if isempty(input1) || isempty(input2)
+        %handles.errorText = 'Please enter text in both fields';
+        set(handles.errorText,'string','Please enter text in both fields');
+        set(handles.text6,'string','');
+        set(handles.text7,'string','');
+    else
+        set(handles.errorText,'string','');
+        single_mango(input1,input2);
+        set(handles.text6,'string','defects');
+        set(handles.text7,'string','maturity');
+    end
 
 function edit2_Callback(hObject, eventdata, handles)
 % hObject    handle to edit2 (see GCBO)
