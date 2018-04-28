@@ -1,5 +1,5 @@
 a = 1:50;
-the_answer = zeros(50,3);
+the_answer = zeros(50,4);
 addpath('DB_Mango');
 
 for i = 1:50
@@ -24,4 +24,7 @@ for i = 1:50
     the_answer(i,1) = i;
     the_answer(i,2) = countA;
     the_answer(i,3) = countB;
+        
 end
+
+save('answer.dat','the_answer','-ascii')
