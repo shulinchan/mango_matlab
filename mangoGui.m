@@ -110,7 +110,7 @@ function pushbutton1_Callback(hObject, eventdata, handles)
         set(handles.text7,'string','');
     else
         set(handles.errorText,'string','');
-        single_mango(input1,input2);
+        results = single_mango(input1,input2);
         set(handles.text6,'string','defects');
         set(handles.text7,'string','maturity');
     end
