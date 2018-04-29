@@ -110,9 +110,28 @@ function pushbutton1_Callback(hObject, eventdata, handles)
         set(handles.text7,'string','');
     else
         set(handles.errorText,'string','');
-        single_mango(input1,input2);
-        set(handles.text6,'string','defects');
-        set(handles.text7,'string','maturity');
+        results = single_mango(input1,input2);
+        
+        %set results
+        if results(1,2) == 1
+            set(handles.text6,'string','Defected');
+        else
+            set(handles.text6,'string','Not Defected');
+        end
+       
+        if results(1,1) == 1
+            set(handles.text7,'string','Mature');
+        else
+            set(handles.text7,'string','Immature');
+        end
+        
+        set(handles.text20,'string',results(1,3));
+        set(handles.text21,'string',round(results(1,4)));
+        set(handles.text22,'string',round(results(1,5)));
+        set(handles.text23,'string',round(results(1,6)));
+        set(handles.text24,'string',round(results(1,7)));
+        set(handles.text25,'string',round(results(1,8)));
+        set(handles.text26,'string',round(results(1,9)));
     end
 
 function edit2_Callback(hObject, eventdata, handles)
