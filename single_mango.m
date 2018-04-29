@@ -53,9 +53,9 @@ function results = single_mango(input1,input2)
     %combine maturity results from 2 sources
     %if confident in color result, return color result
     %else return stem result
-    if (cbirClassification(1,1) > 15) || (cbirClassification(1,1) > 15 && result == 2)
+    if (cbirClassification(1,1) > 15) || (cbirClassification(1,1) >= 10 && result == 2)
         results(1,1) = 1;
-    elseif (cbirClassification(1,2) > 15) || (cbirClassification(1,2) > 15 && result == 2)
+    elseif (cbirClassification(1,2) > 15) || (cbirClassification(1,2) >= 10 && result == 2)
         results(1,1) = 0;
     else
         results(1,1) = result;
