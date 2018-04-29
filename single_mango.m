@@ -3,7 +3,7 @@ function results = single_mango(input1,input2)
     %uses cbir, stem analysis, and defect detection
     %outputs vector of statistics/classification data
     
-    %results: 
+    %instantiate vector to return 'results': 
     %maturity (index 1) and defect (index 2) classification 
     %ratio of defects (index 3)
     %6 counts of different types of defects (indices 4-9)
@@ -51,12 +51,14 @@ function results = single_mango(input1,input2)
     end
     
     %combine maturity results from 2 sources
-    if cbirClassification(1,1) == 20
+    %if confident in color result, return color result
+    %else return stem result
+    if cbirClassification(1,1) > 15
         results(1,1) = 1;
-    elseif cbirClassification(1,2) == 20
+    elseif cbirClassification(1,2) > 15
         results(1,1) = 0;
     else
-        results(1,1) = 0;
+        results(1,1) = result;
     end
     
     disp(results)
