@@ -1,0 +1,30 @@
+Mango_01_ANM.JPG --> Prediction: N M Actual: N M
+Mango_02_ANM.JPG --> Prediction: N M Actual: N M
+Mango_04_ANM.JPG --> Prediction: N M Actual: N M
+Mango_06_ADM.JPG --> Prediction: N M Actual: D M
+Mango_08_ADM.JPG --> Prediction: D M Actual: D M
+Mango_11_ANM.JPG --> Prediction: N M Actual: N M
+Mango_12_ADM.JPG --> Prediction: N M Actual: D M
+Mango_13_ANM.JPG --> Prediction: N M Actual: N M
+Mango_16_ANM.JPG --> Prediction: N M Actual: N M
+Mango_18_ADM.JPG --> Prediction: N M Actual: D M
+Mango_20_ANM.JPG --> Prediction: N M Actual: N M
+Mango_21_ANM.JPG --> Prediction: N M Actual: N M
+Mango_22_ANM.JPG --> Prediction: N M Actual: N M
+Mango_23_ADM.JPG --> Prediction: D M Actual: D M
+Mango_24_ADM.JPG --> Prediction: N M Actual: D M
+Mango_25_ANM.JPG --> Prediction: D I Actual: N M
+Mango_26_ADI.JPG --> Prediction: D I Actual: D I
+Mango_33_ANI.JPG --> Prediction: D I Actual: N I
+Mango_35_ANI.JPG --> Prediction: N I Actual: N I
+Mango_37_ADI.JPG --> Prediction: N I Actual: D I
+Mango_38_ANI.JPG --> Prediction: N M Actual: N I
+Mango_39_ANI.JPG --> Prediction: D I Actual: N I
+Mango_40_ANI.JPG --> Prediction: D I Actual: N I
+Mango_42_ADI.JPG --> Prediction: N I Actual: D I
+Mango_45_ADI.JPG --> Prediction: D I Actual: D I
+Mango_47_ANI.JPG --> Prediction: N I Actual: N I
+Mango_48_ADI.JPG --> Prediction: N I Actual: D I
+Mango_49_ANI.JPG --> Prediction: N M Actual: N I
+Defectedness: 17/28
+Maturity: 25/28

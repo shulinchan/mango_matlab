@@ -60,7 +60,6 @@ function results = single_mango(input1,input2)
     else
         results(1,1) = result;
     end
-    
-    disp(results)
+    %disp(results)
 end
 
