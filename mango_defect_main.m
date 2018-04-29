@@ -26,8 +26,11 @@ function results = mango_defect_main(input1, input2)
     [small_count, medium_count, large_count] = mango_defect_count (solar_perimeters, small_count, medium_count, large_count);
     
     results(2) = mean(defect_area_ratios);
-    results(1) = round(10 * results(2));
-    
+    if (round(10 * results(2)) >= 1)
+        results(1) = 1;
+    else
+        results(1) = 0;
+    end    
     results(3) = sum(small_count(1,:));
     results(4) = sum(small_count(2,:));
     
